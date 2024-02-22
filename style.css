@@ -36,4 +36,171 @@ html {
   font-family: var(--base-font);
   font-size: 62.5%;
   color: var(--gray-500);
+  background: var(--light-blue-100);
+}
+
+.container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.encoder__content {
+  min-width: 60%;
+}
+
+.encoder__area {
+  width: 80%;
+  margin-left: auto;
+}
+
+.encoder__textarea {
+  width: 100%;
+  height: 400px;
+  padding: 1rem 0;
+  font-family: var(--base-font);
+  font-size: 3.2em;
+  font-weight: 400;
+  letter-spacing: 0em;
+  color: var(--dark-blue-300);
+  border: none;
+  background: transparent;
+}
+
+.encoder__textarea::placeholder {
+  color: var(--dark-blue-300);
+}
+
+textarea {
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.encoder__warning {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.encoder__warning-text {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.encoder__buttons {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.encoder__btn,
+.encoder__btn-copy {
+  background-color: var(--dark-blue-300);
+  border-radius: 24px;
+  width: 46%;
+  height: 50px;
+  border-style: none;
+  font-family: var(--base-font);
+  font-weight: 400;
+  font-size: 1.6em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.encoder__btn:hover,
+.encoder__btn:nth-child(2):hover,
+.encoder__btn-copy:hover {
+  box-shadow: 1px 1px 1px 1px var(--dark-blue-300);
+  background-color: var(--dark-blue-200);
+  border: 1px solid var(--dark-blue-300);
+  color: white;
+}
+
+.encoder__btn:nth-child(2) {
+  background-color: var(--light-blue-400);
+  color: var(--dark-blue-300);
+  border: 1px solid var(--dark-blue-300);
+}
+
+.decoder__content {
+  width: 25%;
+}
+.decoder__inicial {
+  height: 600px;
+  background-color: white;
+  border-radius: 32px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 24px 32px -8px #00000014;
+  margin: 0 auto;
+}
+
+.decoder__inicial-img {
+  width: 100%;
+}
+
+.decoder__inicial-text {
+  font-size: 2.4em;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: center;
+  padding-bottom: 1.6rem;
+}
+
+.decoder__instructions {
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.decoder__area {
+  height: 580px;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px #00000014;
+  display: flex;
+  flex-direction: column;
+  gap: 6.1rem;
+}
+
+.decoder__textarea {
+  width: 100%;
+  height: 436px;
+  padding: 32px;
+  box-sizing: border-box;
+  font-family: var(--base-font);
+  font-size: 2.4em;
+  font-weight: 400;
+  color: var(--gray-400);
+  border: none;
+  background: transparent;
+}
+
+.encoder__btn-copy {
+  background-color: transparent;
+  color: var(--dark-blue-300);
+  border: 1px solid var(--dark-blue-300);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer__text {
+  color: var(--dark-blue-300);
+  font-size: 1.2em;
+  font-weight: 400;
 }
