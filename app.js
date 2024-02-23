@@ -46,7 +46,14 @@ function encode(text) {
 //Capturar evento click botón encriptar y hacer el encriptado
 encodeBtn.addEventListener("click", () => {
   showTextarea();
-  if (encoderText.value != "") {
+  //validamos que el texto sea en minúscula y no contenga números ni caracteres especiales
+  let validRegex = /[^a-z\s]/;
+  if (validRegex.test(encoderText.value)) {
+    alert("Estas escribiendo mal negri");
+    cleanTextarea();
+    showTextarea();
+    //si el texto es válido se realiza la encriptación
+  } else if (encoderText.value != "") {
     let finalText = encode(encoderText.value);
     decodedText.value = finalText;
     //console.log(finalText);
@@ -72,7 +79,14 @@ function decode() {
 //Capturar evento click botón desencriptar y hacer el desencriptado
 decodeBtn.addEventListener("click", () => {
   showTextarea();
-  if (encoderText.value != "") {
+  //validamos que el texto sea en minúscula y no contenga números ni caracteres especiales
+  let validRegex = /[^a-z\s]/;
+  if (validRegex.test(encoderText.value)) {
+    alert("Estas escribiendo mal negri");
+    cleanTextarea();
+    showTextarea();
+    //si el texto es válido se realiza la desencriptación
+  } else if (encoderText.value != "") {
     let recodedText = decode(encoderText.value);
     decodedText.value = recodedText;
     cleanTextarea();
