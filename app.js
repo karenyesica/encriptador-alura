@@ -7,6 +7,20 @@ const decoderInicial = document.getElementById("decoderInicial");
 const decoderAnswer = document.getElementById("decoderAnswer");
 
 //Función para mostrar textarea que corresponda (con imagen o con texto desencriptado)
+const showTextarea = () => {
+  if (encoderText.value === "") {
+    decoderInicial.style.display = "flex";
+    decoderAnswer.style.display = "none";
+  } else {
+    decoderInicial.style.display = "none";
+    decoderAnswer.style.display = "flex";
+  }
+};
+
+//Función para limpiar textarea
+const cleanTextarea = () => {
+  encoderText.value = "";
+};
 
 //Matriz de encriptado
 const encoderMatrix = [
@@ -17,9 +31,8 @@ const encoderMatrix = [
   ["u", "ufat"],
 ];
 
-/* Función para encriptar: recorremos la matriz con for, declaramos la variable
-i y la inicializamos en 0, le decimos que mientras i sea menor a la longitud de la matriz
-al 0 inicial le sumamos 1. Evaluamos si el texto a encriptar contiene alguna de las letras
+/* Función para encriptar: recorremos la matriz con for, declaramos la variable i y la inicializamos en 0, le decimos que mientras i sea menor 
+a la longitud de la matriz al 0 inicial le sumamos 1. Evaluamos si el texto a encriptar contiene alguna de las letras
 de la matriz en posisción[i][0] y de ser así pedimos que la reemplace por lo que hay en [i][1]*/
 function encode(text) {
   for (let i = 0; i < encoderMatrix.length; i++) {
@@ -32,15 +45,16 @@ function encode(text) {
 
 //Capturar evento click botón encriptar y hacer el encriptado
 encodeBtn.addEventListener("click", () => {
+  showTextarea();
   if (encoderText.value != "") {
     let finalText = encode(encoderText.value);
     decodedText.value = finalText;
     //console.log(finalText);
+    cleanTextarea();
   }
 });
 
-/*Función desencriptar usando el método .replace() con el flag /g para buscar
- un patrón más de una vez y no detenerse en la primera coincidencia*/
+/*Función desencriptar usando el método .replace() con el flag /g para buscar un patrón más de una vez y no detenerse en la primera coincidencia*/
 function decode() {
   let inicialText = encoderText.value;
   let finalText = decodedText.value;
@@ -57,8 +71,10 @@ function decode() {
 
 //Capturar evento click botón desencriptar y hacer el desencriptado
 decodeBtn.addEventListener("click", () => {
+  showTextarea();
   if (encoderText.value != "") {
     let recodedText = decode(encoderText.value);
     decodedText.value = recodedText;
+    cleanTextarea();
   }
 });
