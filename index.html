@@ -15,28 +15,28 @@
                 <img class="header__img" src="/img/logo.png" alt="Logo Alura">
             </header>
             <div class="encoder__area">
-                <textarea class="encoder__textarea" name="" id="" placeholder="Ingrese el texto aqui"></textarea>
+                <textarea class="encoder__textarea" id="encoderText" placeholder="Ingrese el texto aqui"></textarea>
                 <div class="encoder__warning">
                     <img class="encoder__warning-img" src="/img/warning.png"
                         alt="Icono signo de admiración, destancando que la información es importante">
                     <p class="encoder__warning-text">Solo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="encoder__buttons">
-                    <button class="encoder__btn" id="encode">Encriptar</button>
-                    <button class="encoder__btn" id="decode">Desencriptar</button>
+                    <button class="encoder__btn" id="encodeBtn">Encriptar</button>
+                    <button class="encoder__btn" id="decodeBtn">Desencriptar</button>
                 </div>
             </div>
         </section>
         <section class="decoder__content">
-            <div class="decoder__inicial">
+            <div class="decoder__inicial" id="decoderInicial">
                 <img class="decoder__inicial-img" src="/img/seeker.png"
                     alt="Ilustración en tonos azules de una persona sentada con una lupa en su mano mirando un diamante">
                 <h2 class="decoder__inicial-text">Ningún mensaje fue encontrado</h2>
                 <p class="decoder__instructions">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <div class="decoder__area">
-                <textarea class="decoder__textarea" name="" id=""></textarea>
-                <button class="encoder__btn-copy" id="copy">Copiar</button>
+            <div class="decoder__area" id="decoderAnswer">
+                <textarea class="decoder__textarea" id="decodedText"></textarea>
+                <button class="encoder__btn-copy" id="copyBtn">Copiar</button>
             </div>
         </section>
     </main>
@@ -50,6 +50,7 @@
                 </path>
             </svg></a>
     </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>
