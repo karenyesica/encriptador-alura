@@ -114,7 +114,8 @@ textarea:focus {
 
 .encoder__btn:hover,
 .encoder__btn:nth-child(2):hover,
-.encoder__btn-copy:hover {
+.encoder__btn-copy:hover,
+.swal2-confirm:hover {
   box-shadow: 1px 1px 1px 1px var(--dark-blue-300);
   background-color: var(--dark-blue-200);
   border: 1px solid var(--dark-blue-300);
@@ -203,4 +204,31 @@ textarea:focus {
   color: var(--dark-blue-300);
   font-size: 1.2em;
   font-weight: 400;
+}
+
+/*SweetAlert2 styles */
+.swal2-title {
+  font-family: var(--base-font);
+  font-size: 3.2em;
+  font-weight: 500;
+  letter-spacing: 0em;
+  color: var(--dark-blue-300);
+}
+#swal2-html-container {
+  color: var(--gray-400);
+  font-family: var(--base-font);
+  font-weight: 400;
+  font-size: 1.6em;
+}
+.swal2-confirm {
+  background-color: var(--dark-blue-300);
+  border-radius: 15px;
+  padding: 10px;
+  border-style: none;
+  font-family: var(--base-font);
+  font-weight: 400;
+  font-size: 1.6em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }

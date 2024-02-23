@@ -49,7 +49,14 @@ encodeBtn.addEventListener("click", () => {
   //validamos que el texto sea en minúscula y no contenga números ni caracteres especiales
   let validRegex = /[^a-z\s]/;
   if (validRegex.test(encoderText.value)) {
-    alert("Estas escribiendo mal negri");
+    //alert("Estas escribiendo mal negri");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El texto ingresado solo puede contener letras minúsculas y sin acentos ",
+      buttonsStyling: false,
+      width: 450,
+    });
     cleanTextarea();
     showTextarea();
     //si el texto es válido se realiza la encriptación
@@ -82,7 +89,14 @@ decodeBtn.addEventListener("click", () => {
   //validamos que el texto sea en minúscula y no contenga números ni caracteres especiales
   let validRegex = /[^a-z\s]/;
   if (validRegex.test(encoderText.value)) {
-    alert("Estas escribiendo mal negri");
+    //alert("Estas escribiendo mal negri");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El texto ingresado solo puede contener letras minúsculas y sin acentos ",
+      buttonsStyling: false,
+      width: 450,
+    });
     cleanTextarea();
     showTextarea();
     //si el texto es válido se realiza la desencriptación
