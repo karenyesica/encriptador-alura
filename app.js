@@ -48,8 +48,8 @@ function encode(text) {
 encodeBtn.addEventListener("click", () => {
   //mostramos la imagen e instrucciones inicales
   showTextarea();
-  //validamos que el texto sea en minúscula y no contenga números ni caracteres especiales, permitimos espacios con \s
-  let validRegex = /[^a-z\s]/;
+  //validamos que el texto sea en minúscula y no contenga acentos.
+  let validRegex = /[A-Záéíóú]/;
   if (validRegex.test(encoderText.value)) {
     //alert("Estas escribiendo mal el texto");
     //personalizamos el alert con la biblioteca SweetAlert2
@@ -92,8 +92,8 @@ function decode() {
 decodeBtn.addEventListener("click", () => {
   //mostramos la imagen e instrucciones inicales
   showTextarea();
-  //validamos que el texto sea en minúscula y no contenga números ni caracteres especiales, permitimos espacios con \s
-  let validRegex = /[^a-z\s]/;
+  //validamos que el texto sea en minúscula y no contenga acentos.
+  let validRegex = /[A-Záéíóú]/;
   if (validRegex.test(encoderText.value)) {
     //alert("Estas escribiendo mal el texto");
     //personalizamos el alert con la biblioteca SweetAlert2
@@ -123,7 +123,7 @@ const copy = () => {
   decodedText.setSelectionRange(0, 99999); //para mobile
   //copiado del texto
   navigator.clipboard.writeText(decodedText.value);
-  alert("Copied the text: " + decodedText.value);
+  //alert("Copied the text: " + decodedText.value);
 };
 
 //Capturar el evento click para copiar el texto del resultado

@@ -43,7 +43,6 @@ html {
   margin-top: 2rem;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2rem;
 }
 
 .encoder__content {
@@ -102,7 +101,7 @@ textarea:focus {
   background-color: var(--dark-blue-300);
   border-radius: 24px;
   width: 46%;
-  height: 50px;
+  height: 67px;
   border-style: none;
   font-family: var(--base-font);
   font-weight: 400;
@@ -141,10 +140,6 @@ textarea:focus {
   justify-content: center;
   box-shadow: 0px 24px 32px -8px #00000014;
   margin: 0 auto;
-}
-
-.decoder__inicial-img {
-  width: 100%;
 }
 
 .decoder__inicial-text {
@@ -231,4 +226,116 @@ textarea:focus {
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+/* Media queries */
+@media screen and (min-width: 1367px) {
+  .container,
+  .footer__container {
+    max-width: 1440px;
+    margin: 4rem auto 0 auto;
+  }
+
+  .encoder__area {
+    width: 68%;
+  }
+
+  .encoder__textarea,
+  .decoder__textarea {
+    height: 60vh;
+    max-height: 764px;
+  }
+
+  .decoder__content {
+    width: 28%;
+  }
+  .decoder__inicial,
+  .decoder__area {
+    padding: 32px;
+    height: 71vh;
+    max-height: 944px;
+  }
+  .decoder__inicial-img {
+    width: initial;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: stretch;
+    margin-top: 7rem;
+  }
+  .encoder__area {
+    max-width: calc(100% - 80px);
+    width: 100%;
+    margin: 116px auto 0 auto;
+  }
+  .encoder__buttons {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .encoder__btn {
+    width: 47%;
+  }
+  .encoder__btn-copy {
+    margin-top: 32px;
+    width: 100%;
+  }
+  .decoder__content {
+    max-width: calc(100% - 80px);
+    width: 100%;
+    margin: 64px 40px 40px 40px;
+  }
+  .decoder__inicial,
+  .decoder__area {
+    height: fit-content;
+    padding: 32px;
+    gap: 0;
+  }
+  .decoder__inicial-img {
+    display: none;
+  }
+
+  .decoder__textarea {
+    padding: 0;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin: 2.4rem 0 2.4rem 0;
+  }
+  .encoder__area {
+    margin: 5.6rem 1.6rem 0 1.6rem;
+    max-width: calc(100% - 3.2rem);
+  }
+
+  .encoder__textarea {
+    max-height: 30rem;
+    padding: 0;
+  }
+
+  .encoder__warning {
+    margin: 1rem 0 1.6rem 0;
+  }
+
+  .encoder__buttons {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .encoder__btn {
+    width: 100%;
+  }
+
+  .decoder__content {
+    margin: 6.4rem 1.6rem 0 1.6rem;
+    max-width: calc(100% - 3.2rem);
+  }
+
+  .decoder__textarea {
+    height: 595px;
+  }
 }
